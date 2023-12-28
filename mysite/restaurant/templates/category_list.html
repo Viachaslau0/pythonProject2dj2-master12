@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for category in category_list %}
+<a href="{% url 'category_detail' slug=category.slug %}">{{ category.name }}</a><br>
+<p>Описание: {{ category.desc }}</p>
+{% endfor %}
+</body>
+</html>

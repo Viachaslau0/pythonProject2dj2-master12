@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ category.name }}</title>
+</head>
+<body>
+<h1>{{ category.name }}</h1>
+{% for category in category_detail %}
+<a href="{% url 'category_detail' slug=category.slug %}">{{ category.name }}</a>
+<p>Описание: {{ category.desc }}</p>
+<br>
+{% endfor %}
+{% for fooditem in fooditems %}
+<a href="{% url 'fooditem_detail' slug=fooditem.slug %}">{{ fooditem.name }}</a>
+<br>
+{% endfor %}
+</body>
+</html>
